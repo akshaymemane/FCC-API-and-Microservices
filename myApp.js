@@ -12,9 +12,10 @@ app.use((req,res,next)=>{
     next();
 });
 
-//10
+//11
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
 //2
 // app.get("/",(req,res)=>{
 //     res.send("Hello Express");
@@ -56,14 +57,18 @@ app.get("/:word/echo",(req,res)=>{
     res.send({"echo":word});
 });
 
-//9
+//10
 app.get("/name",(req,res)=>{
     let firstname = req.query.first;
     let lastname = req.query.last;
     res.send({"name":firstname + " " + lastname});
 });
 
-
+//12
+app.post("/name",(req,res)=>{
+    const {first,last} = req.body;
+    res.send({"name":first + " " + last});
+});
 
 
 
