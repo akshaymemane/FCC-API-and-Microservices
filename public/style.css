@@ -3,8 +3,8 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
-	color: #222;
-	background-color: #ECF0F1;
+	background-color: #222;
+	color: #ddd;
 	text-align: center;
 }
 
@@ -32,4 +32,12 @@ a {
 img {
 	margin: 20px auto 0 auto;
 	display: block;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+input[type=text], label {
+	margin-bottom: 8px;
 }
