@@ -13,11 +13,8 @@ app.use((req,res,next)=>{
 });
 
 //10
-app.use((req,res,next)=>{
-    bodyParser.urlencoded({extended: false});
-    next();
-});
-
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 //2
 // app.get("/",(req,res)=>{
 //     res.send("Hello Express");
