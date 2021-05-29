@@ -5,6 +5,12 @@ require('dotenv').config();
 //1
 console.log("Hello World");
 
+//7
+app.use((req,res,next)=>{
+    console.log(req.method + " " + req.path + " - " + req.ip);
+    next();
+});
+
 //2
 // app.get("/",(req,res)=>{
 //     res.send("Hello Express");
@@ -31,7 +37,6 @@ app.get("/json",(req,res)=>{
         res.json({"message": "Hello json"});
     }
 });
-
 
 
 
