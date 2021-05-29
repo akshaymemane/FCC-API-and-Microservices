@@ -19,7 +19,7 @@ app.use((req,res,next)=>{
 //3
 app.get("/",(req,res)=>{
     res.sendFile(__dirname + "/views/index.html");
-  });
+});
 
 //4
 app.use('/public', express.static(__dirname + '/public'));
@@ -46,7 +46,11 @@ app.get('/now', function(req, res, next) {
     res.send({"time":req.time});
 });
 
-
+//9
+app.get("/:word/echo",(req,res)=>{
+    let word = req.params.word;
+    res.send({"echo":word});
+});
 
 
 
